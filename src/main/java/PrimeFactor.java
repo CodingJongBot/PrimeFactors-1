@@ -7,21 +7,14 @@ public class PrimeFactor {
         List<Integer> facotrs = new ArrayList<>();
         if (number > 1) {
             int divisor = 2;
-            if (number == 4) {
-                while (number % divisor == 0) {
-                    facotrs.add(divisor);
-                    number /= divisor;
-                }
-            } else if (number == 6) {
+
+            if (number ==4||number == 6||number==9||number==12  ) {
                 for (divisor = 2; number > 1; divisor++) {
                     while (number % divisor == 0) {
                         facotrs.add(divisor);
                         number /= divisor;
                     }
                 }
-            } else if (number == 9) {
-                facotrs.add(3);
-                facotrs.add(3);
             } else {
                 facotrs.add(number);
             }
